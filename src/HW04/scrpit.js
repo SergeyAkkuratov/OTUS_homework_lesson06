@@ -3,7 +3,7 @@ export let user = {
 }
 
 export function setAge(num) {
-    user.age = num;
+    user.age = Number(num);
 }
 
 export function cloneObjectWithRole(name) {
