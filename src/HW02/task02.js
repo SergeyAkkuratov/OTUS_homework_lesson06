@@ -1,4 +1,5 @@
-export function showMonth(index) {
+export function showMonth() {
+    let index = prompt("Введите индекс месяца:");
     switch(`${index}`) {
         case "1":
             console.log("январь");

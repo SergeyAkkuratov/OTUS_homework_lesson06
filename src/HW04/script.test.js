@@ -2,7 +2,8 @@ import { user, setAge, cloneObjectWithRole, getVarsFromObject } from "./scrpit.j
 
 describe("All tasks in one file", () => {   
     it("Task 01: should contains age = 18", () => {
-        setAge(18);
+        jest.spyOn(window, "prompt").mockReturnValueOnce(18);
+        setAge();
         expect(user.age).toBe(18);
     })
 

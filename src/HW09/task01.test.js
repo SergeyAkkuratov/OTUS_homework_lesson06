@@ -1,29 +1,16 @@
 import { isRight } from "./task01";
 
-describe("Task01", () => {
-    it("triangle is right (a is hypotenuse)", () => {
-        expect(isRight(5,3,4)).toBe(true);
-    })
-    
-    it("triangle is right (b is hypotenuse)", () => {
-        expect(isRight(3,5,4)).toBe(true);
-    })
-    
-    it("triangle is right (c is hypotenuse)", () => {
-        expect(isRight(3,4,5)).toBe(true);
-    })
-    
-    it("triangle is not right", () => {
-        expect(isRight(2,2,4)).toBe(false);
-    })
-    it("triangle is not right", () => {
-        expect(isRight(4,2,2)).toBe(false);
-    })
-    it("triangle is not right", () => {
-        expect(isRight(2,4,2)).toBe(false);
-    })
-
-    it("triangle is not right", () => {
-        expect(isRight(2,2,2)).toBe(false);
+describe("Task01 with prompt", () => {
+    it.each([
+        ["5 3 4", true],
+        ["3 5 4", true],
+        ["3 4 5", true],
+        ["2 2 4", false],
+        ["4 2 2", false],
+        ["2 4 2", false],
+        ["2 2 2", false]
+    ])("given %p -> expects %p", (values, result) => {
+        jest.spyOn(window, "prompt").mockReturnValueOnce(values);
+        expect(isRight()).toBe(result);
     })
 })

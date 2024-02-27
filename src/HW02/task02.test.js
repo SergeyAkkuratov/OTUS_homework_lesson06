@@ -4,21 +4,22 @@ describe("console checks", () => {
     const logSpy = jest.spyOn(console, 'log');
 
     it.each([
-        {index: 1, month: "январь"},
-        {index: 2, month: "февраль"},
-        {index: 3, month: "март"},
-        {index: 4, month: "апрель"},
-        {index: 5, month: "май"},
-        {index: 6, month: "июнь"},
-        {index: 7, month: "июль"},
-        {index: 8, month: "август"},
-        {index: 9, month: "сентябрь"},
-        {index: 10, month: "октябрь"},
-        {index: 11, month: "ноябрь"},
-        {index: 12, month: "декабрь"},
-        {index: "error", month: "Нет месяца с индексом: error"}
-    ])("given %p -> expects %p", ({index, month}) => {
-        showMonth(index);        
+        [1, "январь"],
+        [2, "февраль"],
+        [3, "март"],
+        [4, "апрель"],
+        [5, "май"],
+        [6, "июнь"],
+        [7, "июль"],
+        [8, "август"],
+        [9, "сентябрь"],
+        [10, "октябрь"],
+        [11, "ноябрь"],
+        [12, "декабрь"],
+        ["error", "Нет месяца с индексом: error"]
+    ])("given %p -> expects %p", (index, month) => {
+        jest.spyOn(window, "prompt").mockReturnValueOnce(index);
+        showMonth();        
         expect(logSpy).toHaveBeenCalledWith(month);
     })
 })

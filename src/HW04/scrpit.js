@@ -2,8 +2,8 @@ export let user = {
     name: 'John'
 }
 
-export function setAge(num) {
-    user.age = Number(num);
+export function setAge() {
+    user.age = Number(prompt("Введите возраст:"));
 }
 
 export function cloneObjectWithRole(name) {
