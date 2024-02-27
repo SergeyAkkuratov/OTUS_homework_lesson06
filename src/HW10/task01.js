@@ -1,5 +1,3 @@
-const getComposedRegex = (...regexes) => new RegExp(regexes.map(regex => regex.source).join("|"));
-
 export function isDate(str){
     let regexpSource = [
         /^(3[01]|[12][0-9]|0?[1-9])(\/|-|\.)(0?[1-9]|1[012])\2(\d{2})?\d{2}$/,
