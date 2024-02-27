@@ -1,4 +1,5 @@
-export function isDate(str){
+export function isDate(){
+    let userString = prompt("Введите строку для проверки:");
     let regexpSource = [
         /^(3[01]|[12][0-9]|0?[1-9])(\/|-|\.)(0?[1-9]|1[012])\2(\d{2})?\d{2}$/,
         /^(1[0-2]|0?[1-9])(\/|-|\.)(3[01]|[12][0-9]|0?[1-9])\2(\d{2})?\d{2}$/,
@@ -6,5 +7,5 @@ export function isDate(str){
         /^(\d{2})?\d{2}(\/|-|\.)(3[01]|[12][0-9]|0?[1-9])\2(1[0-2]|0?[1-9])$/
     ];
 
-    return regexpSource.reduce((result, value) => {return result || value.test(str)}, false);
+    return regexpSource.reduce((result, value) => {return result || value.test(userString)}, false);
 }
