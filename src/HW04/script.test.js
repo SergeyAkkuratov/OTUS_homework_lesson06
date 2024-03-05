@@ -17,9 +17,10 @@ describe("All tasks in one file", () => {
 
     it("Task 03: should create ", () => {
         let admin = cloneObjectWithRole('admin');
-        let {name, role} = getVarsFromObject(admin);
+        let {name, role, age} = getVarsFromObject(admin);
 
         expect(name).not.toBe(admin.name);
         expect(role).not.toBe(admin.role);
+        expect(age).not.toBe(admin.age);
     })
 })

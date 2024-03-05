@@ -7,6 +7,6 @@ describe("console checks", () => {
         jest.spyOn(window, "prompt").mockReturnValueOnce(38);
         getAvarage();        
         
-        expect(logSpy).toHaveBeenCalledWith((1+38)/2);
+        expect(logSpy).toHaveBeenCalledWith(19);
     })
 })

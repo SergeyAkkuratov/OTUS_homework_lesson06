@@ -10,4 +10,8 @@ describe("Task02", ()=>{
     it("_1234dasc21fdswaf === true", () => {
         expect(isWord('_1234dasc21fdswaf')).toBe(true);
     })
+
+    it("'  Hello ' === true", () => {
+        expect(isWord('  Hello ')).toBe(true);
+    })
 })

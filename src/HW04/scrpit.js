@@ -11,8 +11,8 @@ export function cloneObjectWithRole(name) {
 }
 
 export function getVarsFromObject(obj) {
-    let {name, role} = obj;
-    return [name, role];
+    let {name, role, age} = obj;
+    return [name, role, age];
 }
 
 module.exports = {

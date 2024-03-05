@@ -1,3 +1,3 @@
 export function isWord(str) {
-    return !str.includes(" ");
+    return !str.trim().includes(" ");
 }

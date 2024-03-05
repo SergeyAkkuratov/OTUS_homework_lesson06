@@ -1,8 +1,9 @@
 export function showMaxAndMin(array) {
-    let min, max;
+    let min = Number.POSITIVE_INFINITY;
+    let max = Number.NEGATIVE_INFINITY;
     array.forEach(el => {
-        min = (el < min) || (min === undefined) ? el : min;
-        max = (el > max) || (max === undefined) ? el : max;
+        min = (el < min) ? el : min;
+        max = (el > max) ? el : max;
     });
     console.log(min, max);
 }
