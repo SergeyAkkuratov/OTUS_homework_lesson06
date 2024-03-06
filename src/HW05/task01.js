@@ -1,3 +1,3 @@
-export function sum(array) {
-    console.log(array.reduce((result, value) => {return result+value}));
+export default function sum(array) {
+  console.log(array.reduce((result, value) => result + value));
 }

@@ -1,3 +1,3 @@
-export function commonLength(str1, str2) {
-    console.log(str1.length + str2.length);
+export default function commonLength(str1, str2) {
+  console.log(str1.length + str2.length);
 }

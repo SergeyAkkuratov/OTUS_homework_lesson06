@@ -1,6 +1,6 @@
-export function getSqrAndLength(radius){
-    let square = Math.PI * Math.pow(radius, 2);
-    let length = 2 * radius * Math.PI;
+export default function getSqrAndLength(radius) {
+  const square = Math.PI * radius ** 2;
+  const length = 2 * radius * Math.PI;
 
-    console.log(square, length);
+  console.log(square, length);
 }

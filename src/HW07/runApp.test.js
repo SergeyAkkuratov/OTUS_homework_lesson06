@@ -1,4 +1,4 @@
-import { runApp } from "./runApp";
+import runApp from "./runApp";
 
 describe("runApp", () => {
   let el;
@@ -15,7 +15,7 @@ describe("runApp", () => {
   }
 
   function typeText(text) {
-    let input = el.querySelector("input");
+    const input = el.querySelector("input");
     input.value = text;
     input.dispatchEvent(new Event("input"));
   }
@@ -29,7 +29,7 @@ describe("runApp", () => {
   }
 
   function getParagraphs() {
-    return [...el.querySelectorAll("p")].map((el) => el.innerHTML);
+    return [...el.querySelectorAll("p")].map((element) => element.innerHTML);
   }
 
   function getInputText() {
@@ -70,12 +70,12 @@ describe("runApp", () => {
   });
 
   it("remove paragraph if they more then 5", () => {
-    for(let i=4;i<7;i++){
+    for (let i = 4; i < 7; i++) {
       typeText(`${i}${i}${i}`);
       pressButton();
     }
-    let paragraphs = getParagraphs();
+    const paragraphs = getParagraphs();
     expect(paragraphs.length).toBe(5);
     expect(paragraphs[0]).toBe("222");
-  })
+  });
 });

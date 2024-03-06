@@ -1,21 +1,23 @@
-export let user = {
-    name: 'John'
-}
+export const user = {
+  name: "John",
+};
 
 export function setAge() {
-    user.age = Number(prompt("Введите возраст:"));
+  user.age = Number(prompt("Введите возраст:"));
 }
 
 export function cloneObjectWithRole(name) {
-    return {...user, role: name};
+  return { ...user, role: name };
 }
 
 export function getVarsFromObject(obj) {
-    let {name, role, age} = obj;
-    return [name, role, age];
+  const { name, role, age } = obj;
+  return [name, role, age];
 }
 
 module.exports = {
-    user, setAge, cloneObjectWithRole, getVarsFromObject
-}
-
+  user,
+  setAge,
+  cloneObjectWithRole,
+  getVarsFromObject,
+};
