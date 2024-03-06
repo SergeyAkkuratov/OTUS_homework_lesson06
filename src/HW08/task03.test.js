@@ -5,7 +5,7 @@ describe("Task03", () => {
   const youngerDate = "28.11.1989";
 
   it("test getDate function", () => {
-    const testDate = new Date("2015-04-17T00:00:00+0300");
+    const testDate = new Date("2015-04-17T00:00:00");
     expect(getDate("17.04.2015")).toEqual(testDate);
   });
 
